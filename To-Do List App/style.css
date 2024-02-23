@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.card {
+  padding: 2.5em;
+  background-color: white;
+  /* height: 12em; */
+  width: 40%;
+  margin: 100px auto 20px;
+  border-radius: 10px;
+}
+.card h1 {
+  color: navy;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+.card h1 img {
+  width: 30px;
+  margin-left: 0.5em;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #edeef0;
+  border-radius: 20px;
+  padding: 0em 1em;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: large;
+}
+button {
+  border: none;
+  outline: none;
+ padding: 0.6em 2em;
+  border-radius: 20px;
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+ul li {
+  list-style: none;
+  font-size: 1.2em;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(./images/unchecked.png);
+  background-position: center;
+  background-size: cover;
+  top: 12px;
+  left: 8px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(./images/checked.png);
+}
+ul li span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  height: 40px;
+  width: 40px;
+  font-size: 1.2em;
+  line-height: 40px;
+  text-align: center;
+  color: #555;
+  border-radius: 50%;
+}
+ul li span:hover{
+  background: #edeef0;
+  scale: 10px;
+}
